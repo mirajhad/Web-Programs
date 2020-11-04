@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Lab-11 Program </title>
+<link rel="stylesheet" type="text/css" href="view.css" />
+<script type="text/javascript">
+function add()
+{
+var a = document.getElementById("t1").value;
+var b = document.getElementById("t2").value;
+c = +a + +b;
+document.getElementById("t3").value = c;
+}
+function sub()
+{
+var a = document.getElementById("t1").value;
+var b = document.getElementById("t2").value;
+c = a - b;
+document.getElementById("t3").value = c;
+}
+function mul()
+{
+var a = document.getElementById("t1").value;
+var b = document.getElementById("t2").value;
+c = a * b;
+document.getElementById("t3").value = c;
+}
+function div()
+{
+var a = document.getElementById("t1").value;
+var b = document.getElementById("t2").value;
+c = a/b;
+document.getElementById("t3").value = c;
+}
+</script>
+</head>
+<body>
+<center>
+<h3> A SIMPLE CALCULATOR </h3>
+<form>
+<label> Number 1 = </label>
+<input type="text" id="t1" /> <br /> <br />
+<label> Number 2 = </label>
+<input type="text" id="t2" /> <br /> <br />
+<label> Result = </label>
+<input type="text" id="t3" readonly="readonly" />
+<br /> <br />
+<input type="button" value="ADD" onclick="add()"/>
+<input type="button" value="SUB" onclick="sub()"/>
+<input type="button" value="MUL" onclick="mul()"/>
+<input type="button" value="DIV" onclick="div()"/>
+<input type="reset" value="CLEAR"/>
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Lab-10a Program Stack Layers </title>
+<style type="text/css">
+p { position:absolute; }
+.para1
+{
+padding:1in;
+background-color:red;
+margin-top:100px;
+margin-left:300px;
+}
+.para2
+{
+padding:1in;
+background-color:blue;
+margin-top:120px;
+margin-left:320px;
+}
+.para3
+{
+padding:1in;
+background-color:green;
+margin-top:140px;
+margin-left:340px;
+}
+</style>
+
+<script type="text/javascript">
+var val=0;
+function pull(obj,inc)
+{
+
+val=val+inc;
+obj.style.zIndex=val;
+}
+</script>
+</head>
+<body>
+<h1 style="color:blue; text-align:center;">
+Stacking of Paragraphs on top of each other
+</h1>
+<p class="para1" onmouseover="pull(this,1)">
+Dr. Suresh babu
+</p>
+<p class="para2" onmouseover="pull(this,1)">
+Dr. Rajesh Rao
+</p>
+<p class="para3" onmouseover="pull(this,1)">
+Dr. Venkatesh H
+</p>
+</body>
+</html>

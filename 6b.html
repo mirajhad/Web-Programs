@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<script type="text/javascript">
+function ShowHideDiv1(c1)
+	{
+		var t1=document.getElementById('t1');
+		t1.style.display=c1.checked ? "block":"none";
+	}
+	function ShowHideDiv2(chkPassport2)
+	{
+		var t2=document.getElementById('t2');
+		t2.style.display=chkPassport2.checked ? "block":"none";
+	}
+	function ShowHideDiv3(chkPassport3)
+	{
+		var t3=document.getElementById('t3');
+		t3.style.display=chkPassport3.checked ? "block":"none";
+	}
+	function science()
+	{
+		var c1=document.getElementById('c1'),
+		c2=document.getElementById('c2'),
+		c3=document.getElementById('c3'),
+		t1=document.getElementById('t1'),
+		t2=document.getElementById('t2'),
+		t3=document.getElementById('t3');
+		total=0;
+		
+		if(c1.checked)
+			total+=+c1.value*t1.value;
+		if(c2.checked)
+			total+=+c2.value*t2.value;
+		if(c3.checked)
+			total+=+c3.value*t3.value;
+			
+		tax=total*0.5;
+		tax=tax.toFixed(20)
+		t1=+tax+ +total;
+		
+		alert('Total cost \t\t='+total+'\nsaslse tax(5%)\t='+tax+'\n                     \n'+'Your total cosr \t='+t1);
+			}
+		</script>
+	</head>
+	<body>
+	<form method="" onsubmit="return checkCheckBoxs(this);">
+
+		<table>
+		<tr>
+			<td><input type="checkbox" value="59" name="CHECKBOX_1" id="c1" onclick="ShowHideDiv1(this)"/>Apple(59/-)</td>
+			<td><input type="text" id="t1" value="1" style="display:none" size="2" placeholder="Number only"/></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" value="49" name="CHECKBOX_2" id="c2" onclick="ShowHideDiv2(this)"/>Orange(49/-)</td>
+			<td><input type="text" id="t2" value="1" style="display:none" size="2"/></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" value="39" name="CHECKBOX_3" id="c3" onclick="ShowHideDiv3(this)"/>Banana(39/-)</td>
+			<td><input type="text" id="t3" value="1" style="display:none" size="2"/></td>
+		</tr>
+		</table>
+		<input type="submit" value="submit" onclick="science()">
+	</form>
+	</body>
+	</html>	

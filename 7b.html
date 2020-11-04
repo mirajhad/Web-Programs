@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>USN and Semester Validation</title></head>
+<body><center>
+<script type="text/javascript">
+function func(usn,sem)
+{
+	var pattern1=/^[1-4][A-Z]{2}\d{2}[A-Z]{3}\d{2}$/;
+	if(!usn.value.match(pattern1)||usn.value.length==0)
+	{
+		alert ("Invalid USN!\nEnter a valid USN")
+		return false
+	}
+	else alert("USN valid!")
+	var pattern2=/^[1-6]$/
+	if(!sem.value.match(pattern2)||sem.value.length==0)
+	{
+		alert("Invalid Semester!\nEnter a valid Semester")
+		return false
+	}
+	else alert("Semester valid!")
+}
+</script>
+<form action=" ">
+<p>
+USN:&nbsp&nbsp&nbsp<input type="text" name="usn" /><br/><br/>
+Semester: <input type="text" name="sem"/><br/><br/>
+<input type="button" value="Validate" onclick="func(usn,sem)" />
+</p>
+</form>
+</center>
+</body>
+</html>

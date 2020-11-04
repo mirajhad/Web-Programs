@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Limit character input in the textarea including count</title>
+<style type="text/css">
+textarea {
+  display:block;
+  margin:1em 0;
+}  
+</style>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    var text_max = 15;
+    $('#textarea_feedback').html(text_max + ' characters remaining');
+
+    $('#textarea').keyup(function() {
+        var text_length = $('#textarea').val().length;
+        var text_remaining = text_max - text_length;
+
+        $('#textarea_feedback').html(text_remaining + ' characters remaining');
+    });
+});
+</script>
+</head>
+<body>
+<form>
+<label>Maximum 15 characters</label>
+<textarea id="textarea" rows="4" cols="30" maxlength="15" ></textarea>
+<div id="textarea_feedback"></div>
+</form>
+</body>
+</html>

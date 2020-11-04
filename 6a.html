@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+	<script type="text/javascript">
+	function science()
+	{
+		var c1=document.getElementById('c1'),
+		c2=document.getElementById('c2'),
+		c3=document.getElementById('c3');
+		total=0;
+		
+		if(c1.checked)
+			total+=+c1.value;
+		if(c2.checked)
+			total+=+c2.value;
+		if(c3.checked)
+			total+=+c3.value;
+			
+		tax=total*0.5;
+		tax=tax.toFixed(20)
+		t1=+tax+ +total;
+		
+		alert('Total cost \t\t='+total+'\nsaslse tax(5%)\t='+tax+'\n                     \n'+'Your total cosr \t='+t1);
+			}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="checkbox" id="c1" value="59"/>Appale</br>
+		<input type="checkbox" id="c2" value="49"/>Orange</br>
+		<input type="checkbox" id="c3" value="39"/>Banana</br>
+		<input type="button" value="submit" onclick="science()"/></br>
+	</form>
+</body>
+</html>
