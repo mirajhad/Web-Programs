@@ -1,0 +1,79 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 strict//EN"
+"http://www.w3.org/TR/xhtml1/dtd/xhtml1-strict.dtd">
+
+
+<!-- stacking.html
+     An example to illustrate dynamic stacking of images
+     -->
+<html>
+
+<head>
+<title>
+Dynamic stacking of images
+</title>
+<script type = "text/javascript">
+<!--
+var oldTop = "v130";
+// 
+// ************************************************** //
+/* The event handler function to move the given element to the
+   top of the stack.
+*/
+
+function toTop(newTop){
+  /* Set the two DOM addresses, one for the old top
+     element and one for the new top element
+  */
+
+  domTop = document.getElementById(oldTop).style;
+  domNew = document.getElementById(newTop).style;
+
+  /* Set the index properties of the two elements, and
+     reset oldTop to new top */
+
+  domTop.zIndex = "0";
+  domNew.zIndex = "10";
+  oldTop = newTop;
+}
+// ************************************************** //
+//-->
+</script>
+
+<style type ="text/css">
+  .auto1 {position:absolute; top: 0; left: 0; z-index: 0;}
+  .auto2 {position:absolute; top: 50px; left: 110px; z-index: 0;}
+  .auto3 {position:absolute; top: 100px; left: 220px; z-index: 0;}
+  .auto4 {position:absolute; top: 150px; left: 330px; z-index: 0;}
+</style>
+
+</head>
+
+<body>
+
+
+<p>
+  <img class = "auto1" id = "v130"
+       src="file:///C:/Users/Public/Pictures/Sample%20Pictures/Jellyfish.jpg"  width=500 
+       alt="picture of a volvo 130"
+       onclick = "toTop('v130')" />
+
+  <img class = "auto2" id = "v164"
+       src="file:///C:/Users/Public/Pictures/Sample%20Pictures/Chrysanthemum.jpg"  width=500 
+       alt="picture of a volvo 164"
+       onclick = "toTop('v164')" />
+
+  <img class = "auto3" id = "v1800"
+       src="file:///C:/Users/Public/Pictures/Sample%20Pictures/Desert.jpg"  width=500 
+       alt="picture of a volvo 1800"
+       onclick = "toTop('v1800')" />
+
+  <img class = "auto4" id = "v240"
+       src="file:///C:/Users/Public/Pictures/Sample%20Pictures/Penguins.jpg"  width=500 
+       alt="picture of a volvo 240"
+       onclick = "toTop('v240')" />
+
+  </p>
+
+</body>
+</html>

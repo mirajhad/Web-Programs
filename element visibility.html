@@ -1,0 +1,40 @@
+<!-- showHide.html
+     An example to illustrateng visibility control of elements
+     -->
+<html>
+<head>
+<title> 
+Visibility Control
+ </title>
+<script type = "text/javascript">
+<!--
+// The event handler function to  toggle the visibility of the volvo image
+
+function flipImag() {
+  dom = document.getElementById("164volvo").style;
+  // Flip the visibility objective to whatever is not now
+
+  if (dom.visibility == "visible")
+     dom.visibility = "hidden";
+  else
+     dom.visibility = "visible";
+}
+//-->
+</script>
+</head>
+
+<body>
+<form action ="">
+
+<div id ="164volvo" style = "position: relative;
+    visibility: "visible;">
+    <img src= "file:///C:/Users/Public/Pictures/Sample%20Pictures/Jellyfish.jpg" alt="(Picture of an 164 Volvo)" />
+</div>
+<p>
+<br />
+<input type= "button" value = "Toggle car"
+       onclick = "flipImag()" />
+</p>
+</form>
+</body>
+</html>

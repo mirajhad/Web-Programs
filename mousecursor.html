@@ -1,0 +1,59 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 strict//EN"
+"http://www.w3.org/TR/xhtml1/dtd/xhtml1-strict.dtd">
+
+
+<!-- where.html
+     An example to illustrate the position of the cursor
+     -->
+<html>
+
+<head>
+<title>
+Dynamic the position of the cursor
+</title>
+<script type = "text/javascript">
+<!--
+// 
+// ************************************************** //
+/* The event handler function to get and display the
+   coordinates of the cursor, both in an element and
+   on the screen
+*/
+
+function findIt(evnt){
+  document.getElementById("xcoord1").value = evnt.clientX;
+  document.getElementById("ycoord1").value = evnt.clientY;
+  document.getElementById("xcoord2").value = evnt.screenX;
+  document.getElementById("ycoord2").value = evnt.screenY;
+}
+// ************************************************** //
+//-->
+</script>
+
+</head>
+
+<body onclick = "findIt(event)">
+
+  <form action = "">
+
+    <p>
+       Whitin the Client area <br />
+       x:
+       <input type = "text" id = "xcoord1" size = "4" />
+       y:
+       <input type = "text" id = "ycoord1" size = "4" />
+       Relative to the origin of the screen coordinate system:
+       x:
+       <input type = "text" id = "xcoord2" size = "4" />
+       y:
+       <input type = "text" id = "ycoord2" size = "4" />
+
+    </p>
+  </form>
+  <img src="../volvopictures/444.jpg"  width=500 alt="picture of a volvo 444" />
+
+  </p>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+<title> 
+Moving elements
+ </title>
+<script type = "text/javascript">
+<!--
+// The event handler function to move and element
+
+function moveIt(movee, newTop, newLeft) {
+  dom = document.getElementById(movee).style;
+  /* Change the top and left properties to perform the move
+     Note the addition of units to the input values */
+
+  dom.top = newTop + "px";
+  dom.left = newLeft + "px";
+}
+//-->
+</script>
+</head>
+
+<body>
+<form action ="">
+   <p>
+   x coordinate:<input type= "text" id ="leftCoord" size ="5" />
+   <br />
+   y coordinate: <input type= "text" id ="topCoord" size ="5" />
+   <br />
+   <input type= "button" value = "Move it" onclick = 
+      "moveIt('850volvo',
+          document.getElementById('topCoord').value,
+          document.getElementById('leftCoord').value)" />
+   </P>
+</form>
+
+<div id ="850volvo" style = "position: absolute; top: 115 px; left: 0;">
+    <img src= "../volvopictures/850.jpg" alt="(Picture of an 850 Volvo)" />
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 strict//EN"
+"http://www.w3.org/TR/xhtml1/dtd/xhtml1-strict.dtd">
+
+
+<!-- anywhere.html
+     An example to illustrate reactions to the mouse
+     when it is pressed no matter where it is on the screen
+     -->
+<html>
+
+<head>
+<title>
+eacting to the mouse click
+</title>
+<script type = "text/javascript">
+<!--
+// 
+// ************************************************** //
+/* The event handler function to display a message */
+
+function displayIt() {
+   
+  document.getElementById("message").style.visibility = "visible";
+
+}
+
+/* The event handler function to hide a message */
+
+function hideIt() {
+   
+  document.getElementById("message").style.visibility = "hidden";
+
+}
+// ************************************************** //
+//-->
+</script>
+
+</head>
+
+<body>
+
+  <p>
+
+    <span id= "message"
+          style = "color:red; visibility:hidden;
+                   font-size: 20pt; font-style: italic;
+                   font-weight: bold;">
+    Please do NOT click there!
+    </span>
+<script type = "text/javascript">
+<!--
+//
+// ************************************************** //
+   document.onmousedown =displayIt;
+   document.onmouseup =hideIt;
+// ************************************************** //
+//-->
+</script>
+
+</body>
+</html>
